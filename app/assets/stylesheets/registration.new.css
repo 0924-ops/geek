@@ -1,0 +1,61 @@
+.edit3{
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding-top: 10px;
+}
+.edit5{
+width: 30%;
+color: black;
+background: #539804C0;
+border-radius: 9px;
+margin: 20px 5px;
+padding: 20px 45px;
+}
+.edit5 a{
+color:#ffffff;
+}
+.fiel1 label {
+font-weight: 300px;
+font-size: 15px;
+}
+.name2 input[type="text"] {
+border-style: none;
+width: 200px;
+height: 30px;
+background: white;
+border-radius: 10px;
+border: 1px #060339 solid;
+}
+.fiel1 input[type="email"] {
+  border-style: none;
+  width: 200px;
+  height: 30px;
+  background: white;
+  border-radius: 10px;
+  border: 1px #060339 solid;
+  }
+.fiel1 input[type="password"] {
+border-style: none;
+width: 200px;
+height: 30px;
+background: white;
+border-radius: 10px;
+border: 1px #060339 solid;
+}
+.action1 input[type="submit"] {
+border-style: none;
+width: 150px;
+height: 30px;
+background: #F2A566;
+border-radius: 10px;
+border: 1.5px #060339 solid;
+}
+.action1 input[type="submit"]:hover {
+cursor: pointer;
+background: linear-gradient(to bottom,white,white);
+}
+.action1{
+  margin-top: 10px;
+}

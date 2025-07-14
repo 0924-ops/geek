@@ -1,0 +1,75 @@
+<link rel="stylesheets" href="tweets.new.css">
+
+
+
+<%= form_for @tweet, html: { multipart: true } do |f| %>
+  <div class="tweet-form-wrapper">
+    <!-- 左右2カラム -->
+    <div class="form-columns">
+      <!-- 左カラム -->
+      <div class="left-column">
+        <div class="field">
+          <%= f.label :観光地 %><br>
+          <%= f.text_field :place, size: 50 %>
+        </div>
+
+        <div class="field category-tags">
+          <button type="button" class="category-toggle" data-target="all-categories">
+            カテゴリを選択する ▼
+          </button>
+
+          <div id="all-categories" class="category-tags-content" style="display: none;">
+            <% Tag.all.group_by(&:category).each do |category, tags| %>
+              <h4><%= category %></h4>
+              <% ["large", "small"].each do |size| %>
+                <div class="tag-group <%= size %>-tags">
+                  <% tags.select { |tag| tag.size == size }.each do |tag| %>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <%= check_box_tag "tweet[tag_ids][]", tag.id, @tweet.tag_ids.include?(tag.id), class: "form-check-input" %>
+                        <%= tag.name %>
+                      </label>
+                    </div>
+                  <% end %>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="field">
+          <%= f.label :画像 %><br>
+          <%= f.file_field :image %>
+        </div>
+      </div>
+
+      <!-- 右カラム：コメント -->
+      <div class="right-column">
+        <div class="field">
+          <%= f.label :コメント %><br>
+          <%= f.text_area :comment, rows: 15, cols: 50 %>
+        </div>
+      </div>
+    </div>
+
+    <!-- 投稿するボタン -->
+    <div class="submit-button">
+      <%= f.submit "投稿する" %>
+    </div>
+  </div>
+<% end %>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".category-toggle");
+    const content = document.getElementById(toggle.dataset.target);
+
+    toggle.addEventListener("click", () => {
+      if (content.style.display === "none") {
+        content.style.display = "block";
+      } else {
+        content.style.display = "none";
+      }
+    });
+  });
+</script>

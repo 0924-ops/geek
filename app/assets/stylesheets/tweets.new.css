@@ -1,0 +1,92 @@
+.left-column, .right-column {
+  flex: 1;  /* 左右均等の幅 */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.left-column .field, .right-column .field {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-tags h4 {
+  margin-bottom: 5px;
+}
+
+
+.category-toggle {
+  background-color: #eee;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.category-tags-content {
+  padding: 10px 15px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.tweet-form-wrapper {
+  border: 10px solid #ccc;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  max-width: 900px;
+  margin: 90px auto;
+  box-sizing: border-box;
+}
+
+/* 左右2カラムのレイアウト */
+.form-columns {
+  display: flex;
+  gap: 30px;
+}
+
+/* 左カラム：観光地、カテゴリ、画像 */
+.left-column {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 右カラム：コメント */
+.right-column {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Tweetボタンを中央に */
+.submit-button {
+  text-align: center;
+  margin-top: 20px;
+}
+.tag-group {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px 15px !important;
+  margin-bottom: 15px !important;
+}
+
+.form-check {
+  display: inline-block !important;
+  margin-right: 15px !important;
+  margin-bottom: 10px !important;
+}
+.tweet-form-wrapper label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+

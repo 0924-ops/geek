@@ -1,0 +1,16 @@
+.edit1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 5px;
+    }
+    
+    .edit2{
+    width: 72%;
+    color: black;
+    background: #FFE4B5;
+    border-radius: 30px;
+    margin: 20px 5px;
+    padding: 10px 275px;
+    }
