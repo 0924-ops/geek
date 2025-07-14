@@ -10,4 +10,3 @@ document.querySelectorAll('.parent').forEach(parent => {
       });
     });
   });
-});
