@@ -62,6 +62,6 @@ gem 'sass-rails'
 gem 'dotenv-rails'
 gem 'cloudinary'
 gem 'activestorage-cloudinary-service'
-gem 'kaminari', '~> 0.17.0'
+gem 'kaminari', '~> 1.2.2'
 
 
